@@ -153,17 +153,6 @@ TW_MAX_BRIGHTNESS := 255
 
 BOARD_UMS_LUNFILE := "/sys/class/android_usb/f_mass_storage/lun/file"
 
-#MultiROM config. MultiROM also uses parts of TWRP config 
-MR_DPI := hdpi
-MR_KEXEC_MEM_MIN := 0x85000000
-MR_INIT_DEVICES := device/sony/nicki/multirom/init_devices.c
-MR_DPI_FONT := 216
-MR_INPUT_TYPE := type_b
-MR_CONTINUOUS_FB_UPDATE := true
-MR_USE_MROM_FSTAB := true
-MR_FSTAB := device/sony/nicki/recovery/twrp.fstab
-MR_DEFAULT_BRIGHTNESS := 2000
-
 # Override healthd HAL
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.qcom
 TARGET_UNIFIED_DEVICE := true
@@ -195,3 +184,14 @@ BOARD_SEPOLICY_UNION += \
     system.te \
     ueventd.te \
     wpa_supplicant.te
+
+#MultiROM config. MultiROM also uses parts of TWRP config 
+MR_DPI := hdpi
+MR_KEXEC_MEM_MIN := 0x85000000
+MR_INIT_DEVICES := device/sony/nicki/multirom/init_devices.c
+MR_INPUT_TYPE := type_b
+MR_CONTINUOUS_FB_UPDATE := true
+MR_USE_MROM_FSTAB := true
+MR_DPI_FONT := 160
+MR_FSTAB := device/sony/nicki/recovery/twrp.fstab
+MR_DEFAULT_BRIGHTNESS := 2000
